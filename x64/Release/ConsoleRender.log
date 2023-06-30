@@ -1,0 +1,38 @@
+﻿  Window.cpp
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(61,36): warning C4244: '=': conversion from '_Rep' to 'Pulsar::Decimal', possible loss of data
+          with
+          [
+              _Rep=double
+          ]
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(63,34): warning C4244: '=': conversion from '_Rep' to 'Pulsar::Decimal', possible loss of data
+          with
+          [
+              _Rep=double
+          ]
+D:\Program\C++\ConsoleRender\include\Math\Vector4.hpp(223,1): warning C4624: 'Pulsar::vec<4,std::ostream>': destructor was implicitly defined as deleted
+D:\Program\C++\ConsoleRender\include\Debug\Debug.hpp(12): message : see reference to class template instantiation 'Pulsar::vec<4,std::ostream>' being compiled
+D:\Program\C++\ConsoleRender\include\Math\Vector3.hpp(163,1): warning C4624: 'Pulsar::vec<3,std::ostream>': destructor was implicitly defined as deleted
+D:\Program\C++\ConsoleRender\include\Debug\Debug.hpp(12): message : see reference to class template instantiation 'Pulsar::vec<3,std::ostream>' being compiled
+D:\Program\C++\ConsoleRender\include\Math\Vector2.hpp(151,1): warning C4624: 'Pulsar::vec<2,std::ostream>': destructor was implicitly defined as deleted
+D:\Program\C++\ConsoleRender\include\Debug\Debug.hpp(12): message : see reference to class template instantiation 'Pulsar::vec<2,std::ostream>' being compiled
+D:\Program\C++\ConsoleRender\include\Math\Vector1.hpp(109,1): warning C4624: 'Pulsar::vec<1,std::ostream>': destructor was implicitly defined as deleted
+D:\Program\C++\ConsoleRender\include\Debug\Debug.hpp(12): message : see reference to class template instantiation 'Pulsar::vec<1,std::ostream>' being compiled
+D:\Program\C++\ConsoleRender\Window.cpp(54,20): warning C4018: '<': signed/unsigned mismatch
+D:\Program\C++\ConsoleRender\Window.cpp(71,23): warning C4838: conversion from 'uint32_t' to 'SHORT' requires a narrowing conversion
+D:\Program\C++\ConsoleRender\Window.cpp(71,32): warning C4838: conversion from 'uint32_t' to 'SHORT' requires a narrowing conversion
+D:\Program\C++\ConsoleRender\Window.cpp(105,20): warning C4018: '<': signed/unsigned mismatch
+D:\Program\C++\ConsoleRender\Window.cpp(132,3): warning C4838: conversion from 'uint32_t' to 'SHORT' requires a narrowing conversion
+D:\Program\C++\ConsoleRender\Window.cpp(133,3): warning C4838: conversion from 'uint32_t' to 'SHORT' requires a narrowing conversion
+D:\Program\C++\ConsoleRender\Window.cpp(177,42): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Program\C++\ConsoleRender\Window.cpp(179,41): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Program\C++\ConsoleRender\Window.cpp(188,49): warning C4244: '=': conversion from 'float' to 'uint64_t', possible loss of data
+D:\Program\C++\ConsoleRender\Window.cpp(192,45): warning C4244: '=': conversion from 'float' to 'uint64_t', possible loss of data
+D:\Program\C++\ConsoleRender\Window.cpp(196,48): warning C4244: '=': conversion from 'float' to 'uint64_t', possible loss of data
+D:\Program\C++\ConsoleRender\Window.cpp(208,16): warning C4244: 'argument': conversion from 'uint64_t' to 'int', possible loss of data
+  Generating code
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+D:\Program\C++\ConsoleRender\KeyState.hpp(28): warning C4172: returning address of local variable or temporary
+D:\Program\C++\ConsoleRender\KeyState.hpp(26): warning C4172: returning address of local variable or temporary
+  All 745 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  ConsoleRender.vcxproj -> D:\Program\C++\ConsoleRender\x64\Release\ConsoleRender.exe
