@@ -9,6 +9,7 @@
 
 class Circle : public Drawable {
 public:
+	Circle() = default;
 	Circle(uint32_t radius);
 
 	void setRadius(float radius) { m_radius = radius; }

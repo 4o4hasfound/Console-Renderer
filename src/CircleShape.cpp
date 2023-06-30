@@ -1,6 +1,7 @@
 #include "CircleShape.hpp"
 
 std::unordered_map<uint32_t, std::vector<ivec2>* > Circle::vertices_map = std::unordered_map<uint32_t, std::vector<ivec2>* >();
+
 Circle::Circle(uint32_t radius) : 
 	m_radius(radius), m_position(0), m_color(0) {
 	if (vertices_map.find(m_radius) == vertices_map.end()) {

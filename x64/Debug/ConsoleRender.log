@@ -1,4 +1,4 @@
-﻿  main.cpp
+﻿  Demo.cpp
 D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(61,36): warning C4244: '=': conversion from '_Rep' to 'Pulsar::Decimal', possible loss of data
           with
           [
@@ -17,25 +17,25 @@ D:\Program\C++\ConsoleRender\include\Math\Vector2.hpp(151,1): warning C4624: 'Pu
 D:\Program\C++\ConsoleRender\include\Debug\Debug.hpp(12): message : see reference to class template instantiation 'Pulsar::vec<2,std::ostream>' being compiled
 D:\Program\C++\ConsoleRender\include\Math\Vector1.hpp(109,1): warning C4624: 'Pulsar::vec<1,std::ostream>': destructor was implicitly defined as deleted
 D:\Program\C++\ConsoleRender\include\Debug\Debug.hpp(12): message : see reference to class template instantiation 'Pulsar::vec<1,std::ostream>' being compiled
-D:\Program\C++\ConsoleRender\main.cpp(140,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Program\C++\ConsoleRender\main.cpp(140,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-D:\Program\C++\ConsoleRender\main.cpp(141,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Program\C++\ConsoleRender\main.cpp(141,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-D:\Program\C++\ConsoleRender\main.cpp(142,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Program\C++\ConsoleRender\main.cpp(142,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-D:\Program\C++\ConsoleRender\main.cpp(143,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Program\C++\ConsoleRender\main.cpp(143,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-D:\Program\C++\ConsoleRender\main.cpp(96,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Program\C++\ConsoleRender\main.cpp(135): message : see reference to function template instantiation 'bool checkSphereToRect<Rect>(Circle &,const RectOrButton *)' being compiled
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(142,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(142,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(143,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(143,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(144,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(144,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(145,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(145,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(98,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(137): message : see reference to function template instantiation 'bool checkSphereToRect<Rect>(Circle &,const RectOrButton *)' being compiled
           with
           [
               RectOrButton=Rect
           ]
-D:\Program\C++\ConsoleRender\main.cpp(96,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-D:\Program\C++\ConsoleRender\main.cpp(97,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Program\C++\ConsoleRender\main.cpp(97,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-D:\Program\C++\ConsoleRender\main.cpp(98,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Program\C++\ConsoleRender\main.cpp(98,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-D:\Program\C++\ConsoleRender\main.cpp(99,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Program\C++\ConsoleRender\main.cpp(99,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(98,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(99,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(99,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(100,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(100,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(101,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(101,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
   ConsoleRender.vcxproj -> D:\Program\C++\ConsoleRender\x64\Debug\ConsoleRender.exe

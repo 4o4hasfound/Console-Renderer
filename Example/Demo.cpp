@@ -42,7 +42,7 @@ struct Block {
 
 Window* window;
 
-Circle ball(4);
+Circle ball;
 ivec2 direction(1, 1);
 
 std::vector<Block> blocks;
@@ -73,6 +73,7 @@ int main() {
 }
 
 void SetupScene() {
+    ball = Circle(4);
     ball.setPosition(ivec2(WINDOW_WIDTH/2, WINDOW_HEIGHT/2));
     ball.setColor(ivec3(255, 0, 0));
     const int blockWidth = 28, blockHeight = 25;
