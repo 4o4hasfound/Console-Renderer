@@ -5,7 +5,7 @@ Rect::Rect(uint32_t width, uint32_t height) :
 
 }
 
-void Rect::draw(WindowBase* window) const {
+void Rect::draw(WindowBase* window) {
 	for (int y = 0; y < m_height; ++y) {
 		for (int x = 0; x < m_width; ++x) {
 			window->setPixel(x + m_position.x, y + m_position.y, m_color);

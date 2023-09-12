@@ -1,50 +1,15 @@
-﻿  Demo.cpp
-D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(61,36): warning C4244: '=': conversion from '_Rep' to 'Pulsar::Decimal', possible loss of data
+﻿  CircleShape.cpp
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(23,32): warning C4244: 'return': conversion from '_Rep' to 'Pulsar::Decimal', possible loss of data
           with
           [
               _Rep=double
           ]
-D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(63,34): warning C4244: '=': conversion from '_Rep' to 'Pulsar::Decimal', possible loss of data
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(29,29): warning C4244: 'return': conversion from '_Rep' to 'Pulsar::Decimal', possible loss of data
           with
           [
               _Rep=double
           ]
-D:\Program\C++\ConsoleRender\include\Math\Vector4.hpp(223,1): warning C4624: 'Pulsar::vec<4,std::ostream>': destructor was implicitly defined as deleted
-D:\Program\C++\ConsoleRender\include\Debug\Debug.hpp(12): message : see reference to class template instantiation 'Pulsar::vec<4,std::ostream>' being compiled
-D:\Program\C++\ConsoleRender\include\Math\Vector3.hpp(163,1): warning C4624: 'Pulsar::vec<3,std::ostream>': destructor was implicitly defined as deleted
-D:\Program\C++\ConsoleRender\include\Debug\Debug.hpp(12): message : see reference to class template instantiation 'Pulsar::vec<3,std::ostream>' being compiled
-D:\Program\C++\ConsoleRender\include\Math\Vector2.hpp(151,1): warning C4624: 'Pulsar::vec<2,std::ostream>': destructor was implicitly defined as deleted
-D:\Program\C++\ConsoleRender\include\Debug\Debug.hpp(12): message : see reference to class template instantiation 'Pulsar::vec<2,std::ostream>' being compiled
-D:\Program\C++\ConsoleRender\include\Math\Vector1.hpp(109,1): warning C4624: 'Pulsar::vec<1,std::ostream>': destructor was implicitly defined as deleted
-D:\Program\C++\ConsoleRender\include\Debug\Debug.hpp(12): message : see reference to class template instantiation 'Pulsar::vec<1,std::ostream>' being compiled
-D:\Program\C++\ConsoleRender\Example\Demo.cpp(142,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Program\C++\ConsoleRender\Example\Demo.cpp(142,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-D:\Program\C++\ConsoleRender\Example\Demo.cpp(143,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Program\C++\ConsoleRender\Example\Demo.cpp(143,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-D:\Program\C++\ConsoleRender\Example\Demo.cpp(144,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Program\C++\ConsoleRender\Example\Demo.cpp(144,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-D:\Program\C++\ConsoleRender\Example\Demo.cpp(145,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Program\C++\ConsoleRender\Example\Demo.cpp(145,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-D:\Program\C++\ConsoleRender\Example\Demo.cpp(98,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Program\C++\ConsoleRender\Example\Demo.cpp(137): message : see reference to function template instantiation 'bool checkSphereToRect<Rect>(Circle &,const RectOrButton *)' being compiled
-          with
-          [
-              RectOrButton=Rect
-          ]
-D:\Program\C++\ConsoleRender\Example\Demo.cpp(98,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-D:\Program\C++\ConsoleRender\Example\Demo.cpp(99,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Program\C++\ConsoleRender\Example\Demo.cpp(99,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-D:\Program\C++\ConsoleRender\Example\Demo.cpp(100,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Program\C++\ConsoleRender\Example\Demo.cpp(100,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-D:\Program\C++\ConsoleRender\Example\Demo.cpp(101,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Program\C++\ConsoleRender\Example\Demo.cpp(101,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
-  CircleShape.cpp
-D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(61,36): warning C4244: '=': conversion from '_Rep' to 'Pulsar::Decimal', possible loss of data
-          with
-          [
-              _Rep=double
-          ]
-D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(63,34): warning C4244: '=': conversion from '_Rep' to 'Pulsar::Decimal', possible loss of data
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(36,29): warning C4244: 'return': conversion from '_Rep' to 'Pulsar::Decimal', possible loss of data
           with
           [
               _Rep=double
@@ -58,21 +23,21 @@ D:\Program\C++\ConsoleRender\include\Debug\Debug.hpp(12): message : see referenc
 D:\Program\C++\ConsoleRender\include\Math\Vector1.hpp(109,1): warning C4624: 'Pulsar::vec<1,std::ostream>': destructor was implicitly defined as deleted
 D:\Program\C++\ConsoleRender\include\Debug\Debug.hpp(12): message : see reference to class template instantiation 'Pulsar::vec<1,std::ostream>' being compiled
 D:\Program\C++\ConsoleRender\src\CircleShape.cpp(6,10): warning C4244: 'initializing': conversion from 'uint32_t' to 'float', possible loss of data
-D:\Program\C++\ConsoleRender\src\CircleShape.cpp(7,24): warning C4244: 'argument': conversion from 'float' to 'const _Kty', possible loss of data
+D:\Program\C++\ConsoleRender\src\CircleShape.cpp(7,18): warning C4244: 'argument': conversion from 'uint32_t' to 'float', possible loss of data
+D:\Program\C++\ConsoleRender\src\CircleShape.cpp(12,24): warning C4244: 'argument': conversion from 'float' to 'const _Kty', possible loss of data
           with
           [
               _Kty=uint32_t
           ]
-D:\Program\C++\ConsoleRender\src\CircleShape.cpp(9,16): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
-D:\Program\C++\ConsoleRender\src\CircleShape.cpp(10,29): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
-D:\Program\C++\ConsoleRender\src\CircleShape.cpp(11,32): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
-D:\Program\C++\ConsoleRender\src\CircleShape.cpp(13,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Program\C++\ConsoleRender\src\CircleShape.cpp(15,15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Program\C++\ConsoleRender\src\CircleShape.cpp(23,29): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+D:\Program\C++\ConsoleRender\src\CircleShape.cpp(14,16): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+D:\Program\C++\ConsoleRender\src\CircleShape.cpp(15,29): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+D:\Program\C++\ConsoleRender\src\CircleShape.cpp(16,32): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+D:\Program\C++\ConsoleRender\src\CircleShape.cpp(18,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Program\C++\ConsoleRender\src\CircleShape.cpp(20,15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Program\C++\ConsoleRender\src\CircleShape.cpp(28,29): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
   Generating code
-  Previous IPDB and IOBJ mismatch, fall back to full compilation.
-D:\Program\C++\ConsoleRender\include\KeyState.hpp(28): warning C4172: returning address of local variable or temporary
-D:\Program\C++\ConsoleRender\include\KeyState.hpp(26): warning C4172: returning address of local variable or temporary
-  All 748 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  1 of 1154 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    4 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   ConsoleRender.vcxproj -> D:\Program\C++\ConsoleRender\x64\Release\ConsoleRender.exe

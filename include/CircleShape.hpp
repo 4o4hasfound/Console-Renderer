@@ -12,7 +12,7 @@ public:
 	Circle() = default;
 	Circle(uint32_t radius);
 
-	void setRadius(float radius) { m_radius = radius; }
+	void setRadius(float radius);
 	const float& getRadius() const { return m_radius; };
 
 	void setPosition(const ivec2& position) { m_position = position; };
@@ -21,7 +21,7 @@ public:
 	void setColor(const ivec3& color) { m_color = color; };
 	const ivec3& getColor() const { return m_color; };
 private:
-	virtual void draw(WindowBase* window) const override;
+	virtual void draw(WindowBase* window) override;
 
 	float m_radius;
 	ivec2 m_position;

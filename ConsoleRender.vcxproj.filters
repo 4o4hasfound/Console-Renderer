@@ -22,6 +22,9 @@
     <Filter Include="Source Files\Example">
       <UniqueIdentifier>{09194546-3e4f-4c9c-b0e8-59463beb7100}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\stb">
+      <UniqueIdentifier>{c2b72e3f-8524-491a-a306-b8cd57692b42}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Button.cpp">
@@ -47,6 +50,15 @@
     </ClCompile>
     <ClCompile Include="Example\Demo.cpp">
       <Filter>Source Files\Example</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Font.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sound.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +98,12 @@
     <ClInclude Include="include\Debug\Debug.hpp">
       <Filter>Header Files\Debug</Filter>
     </ClInclude>
+    <ClInclude Include="include\CallBack.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CircleShape.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="include\Drawable.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -98,16 +116,25 @@
     <ClInclude Include="include\RectShape.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\setup.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="include\Window.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Button.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\CallBack.hpp">
+    <ClInclude Include="include\stb_truetype.h">
+      <Filter>Header Files\stb</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Font.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\CircleShape.hpp">
+    <ClInclude Include="include\Text.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sound.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

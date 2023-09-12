@@ -13,7 +13,7 @@ public:
 	Drawable() = default;
 	virtual ~Drawable() = default;
 protected:
-	virtual void draw(WindowBase* window) const = 0;
+	virtual void draw(WindowBase* window) = 0;
 };
 
 

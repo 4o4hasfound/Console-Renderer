@@ -3,21 +3,23 @@
 
 #include "Window.hpp"
 #include "CallBack.hpp"
+#include "Drawable.hpp"
 
 class WindowBase;
 
-class Gadget {
+class Gadget: public Drawable {
 public:
 	Gadget() = default;
 
 	void addCallback(Callback* callback) { m_callback = callback; }
 
 	virtual void update(WindowBase* window) = 0;
-	virtual void render(WindowBase* window) = 0;
 
 	bool alive = true;
 protected:
-	Callback* m_callback = new Callback();
+	virtual void draw(WindowBase* window) = 0;
+
+	Callback* m_callback = nullptr;
 	bool m_dragged = false;
 };
 

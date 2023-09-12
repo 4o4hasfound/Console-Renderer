@@ -9,14 +9,14 @@ void Button::update(WindowBase* window) {
 	const ivec2 pos = KeyState::getMousePos(window);
 	if (pos.x >= m_position.x && pos.x <= m_position.x + m_width &&
 		pos.y >= m_position.y && pos.y <= m_position.y + m_height) {
-		m_callback->onHover();
+		if (m_callback) m_callback->onHover();
 		if (KeyState::getKey(VK_LBUTTON).bPressed) {
-			m_callback->onLClick();
+			if (m_callback) m_callback->onLClick();
 			m_dragged = true;
 		}
 	}
 	else {
-		m_callback->onNotHover();
+		if (m_callback) m_callback->onNotHover();
 	}
 	if (!KeyState::getKey(VK_LBUTTON).bHeld) {
 		m_dragged = false;
@@ -24,11 +24,11 @@ void Button::update(WindowBase* window) {
 	if (m_dragged) {
 		const ivec2 now = KeyState::getMousePos(window);
 		const ivec2 last = KeyState::getLastMousePos(window);
-		m_callback->onDrag(now - last);
+		if (m_callback) m_callback->onDrag(now - last);
 	}
 }
 
-void Button::render(WindowBase* window) {
+void Button::draw(WindowBase* window) {
 	for (int y = 0; y < m_height; ++y) {
 		for (int x = 0; x < m_width; ++x) {
 			window->setPixel(x + m_position.x, y + m_position.y, m_color);

@@ -18,7 +18,7 @@ public:
 	constexpr uint32_t getHeight() const { return m_height; }
 
 private:
-	virtual void draw(WindowBase* window) const override;
+	virtual void draw(WindowBase* window) override;
 
 	uint32_t m_width, m_height;
 	ivec2 m_position;

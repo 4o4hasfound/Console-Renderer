@@ -108,12 +108,20 @@ void WindowBase::fill(const ivec3& color) {
 	}
 }
 
-void WindowBase::draw(const Drawable* object) {
+void WindowBase::draw(Drawable* object) {
 	object->draw(this);
 }
 
 void WindowBase::addGadget(Gadget* gadget) {
 	m_gadgets.push_back(gadget);
+}
+
+void WindowBase::renderGadgets() {
+	// Render Gadgets
+	for (int i = 0; i < m_gadgets.size(); ++i) {
+		if (m_gadgets[i]->alive)
+			this->draw(m_gadgets[i]);
+	}
 }
 
 void Window::setTitle(std::wstring title) {
@@ -138,17 +146,11 @@ void Window::render() {
 	
 }
 
-void WindowBase::UpdateGadgets() {
+void WindowBase::updateGadgets() {
 	// Update Gadgets
 	for (int i = 0; i < m_gadgets.size(); ++i) {
 		if (m_gadgets[i]->alive)
 			m_gadgets[i]->update(this);
-	}
-
-	// Render Gadgets
-	for (int i = 0; i < m_gadgets.size(); ++i) {
-		if (m_gadgets[i]->alive)
-			m_gadgets[i]->render(this);
 	}
 }
 

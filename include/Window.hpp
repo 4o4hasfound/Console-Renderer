@@ -11,8 +11,8 @@
 #include "Debug/Time.hpp"
 #include "Debug/Debug.hpp"
 #include "Math/Vector.hpp"
-#include "Drawable.hpp"
 #include "Gadget.hpp"
+#include "Drawable.hpp"
 #include "CallBack.hpp"
 
 
@@ -74,12 +74,13 @@ public:
 	void setPixel(uint32_t x, uint32_t y, const ivec3& color);
 	void setPixel(uint32_t x, uint32_t y, CHAR_INFO char_info);
 	void fill(const ivec3& color = ivec3(0, 0, 0));
-	void draw(const Drawable* object);
+	void draw(Drawable* object);
 
 	void addGadget(Gadget* gadget);
 
 	virtual void render() = 0;
-	void UpdateGadgets();
+	void updateGadgets();
+	void renderGadgets();
 
 	void setWindowPos(const ivec2& position) { m_windowPos = position; }
 	const ivec2& getWindowPos() const { return m_windowPos; }
@@ -101,7 +102,7 @@ protected:
 
 	bool m_alive = true;
 
-	Callback* m_callback = new Callback();
+	Callback* m_callback = nullptr;
 
 	void SetUpRGBMap();
 

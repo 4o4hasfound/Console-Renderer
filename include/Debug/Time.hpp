@@ -2,46 +2,9 @@
 #define PULSAR_TIME_INCLUDED
 
 #include "setup.hpp"
+using Pulsar::Decimal;
 
-namespace Pulsar {
-
-    template<typename R>
-    struct Time {
-        R value;
-        double asMilli;
-        double asSec;
-
-        template<class Functor>
-        Time(Functor func) {
-            std::chrono::steady_clock::time_point t1, t2;
-            t1 = std::chrono::high_resolution_clock::now();
-            value = func();
-            t2 = std::chrono::high_resolution_clock::now();
-            std::chrono::duration<double, std::milli> msm = t2 - t1;
-            asMilli = msm.count();
-            std::chrono::duration<double, std::centi> msc = t2 - t1;
-            asSec = msc.count();
-        }
-    };
-
-    template<>
-    struct Time<void> {
-        double asMilli;
-        double asSec;
-
-        template<class Functor>
-        Time(Functor func) {
-            std::chrono::steady_clock::time_point t1, t2;
-            t1 = std::chrono::high_resolution_clock::now();
-            func();
-            t2 = std::chrono::high_resolution_clock::now();
-            std::chrono::duration<double, std::milli> msm = t2 - t1;
-            asMilli = msm.count();
-            std::chrono::duration<double, std::centi> msc = t2 - t1;
-            asSec = msc.count();
-        }
-    };
-
+namespace Time {
     struct Clock {
         struct Result {
             Decimal asMilli;
@@ -54,30 +17,23 @@ namespace Pulsar {
 
         }
 
-        Result End() {
-            Result ret;
+        Decimal getSec() {
             auto t2 = std::chrono::high_resolution_clock::now();
             std::chrono::duration<double, std::milli> msm = t2 - time;
-            ret.asMilli = msm.count();
-            std::chrono::duration<double, std::centi> msc = t2 - time;
-            ret.asSec = msc.count();
-            return ret;
-        }
-    };
-
-    struct AverageTime {
-        Decimal total, count;
-        AverageTime() : total(0), count(0) {
-
+            return msm.count() / 1000.0;
         }
 
-        void Register(Decimal t) {
-            total += t;
-            ++count;
+        Decimal getMilli() {
+            auto t2 = std::chrono::high_resolution_clock::now();
+            std::chrono::duration<double, std::milli> msm = t2 - time;
+            return msm.count();
         }
 
-        Decimal getAverageTime() {
-            return total / count;
+        Decimal reset() {
+            auto t2 = std::chrono::high_resolution_clock::now();
+            std::chrono::duration<double, std::milli> msm = t2 - time;
+            time = t2;
+            return msm.count();
         }
     };
 }
