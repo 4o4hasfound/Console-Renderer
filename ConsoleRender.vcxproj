@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Example\Demo.cpp" />
+    <ClCompile Include="src\AsciiWindow.cpp" />
     <ClCompile Include="src\Button.cpp" />
     <ClCompile Include="src\CircleShape.cpp" />
     <ClCompile Include="src\Drawable.cpp" />
@@ -150,6 +151,7 @@
     <ClCompile Include="src\Sound.cpp" />
     <ClCompile Include="src\Text.cpp" />
     <ClCompile Include="src\Window.cpp" />
+    <ClCompile Include="src\WindowBase.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Button.hpp" />
@@ -174,9 +176,12 @@
     <ClInclude Include="include\RectShape.hpp" />
     <ClInclude Include="include\setup.hpp" />
     <ClInclude Include="include\Sound.hpp" />
+    <ClInclude Include="include\stb_image.h" />
     <ClInclude Include="include\stb_truetype.h" />
     <ClInclude Include="include\Text.hpp" />
     <ClInclude Include="include\Window.hpp" />
+    <ClInclude Include="include\AsciiWindow.hpp" />
+    <ClInclude Include="include\WindowBase.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="include\Math\Vector1.inl" />

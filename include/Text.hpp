@@ -6,7 +6,7 @@
 
 #include "Font.hpp"
 #include "Drawable.hpp"
-#include "Window.hpp"
+#include "WindowBase.hpp"
 #include "Math/Vector.hpp"
 //#include "stb_truetype.h"
 

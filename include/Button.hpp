@@ -3,13 +3,11 @@
 
 #include<functional>
 #include "Math/Vector.hpp"
-#include "Window.hpp"
+#include "WindowBase.hpp"
 #include "CallBack.hpp"
 #include "Drawable.hpp"
 #include "Gadget.hpp"
 #include "KeyState.hpp"
-
-class WindowBase;
 
 class Button: public Gadget {
 public:

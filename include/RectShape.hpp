@@ -1,7 +1,7 @@
 #ifndef RECT_SHAPE_INCLUDED
 #define RECT_SHAPE_INCLUDED
 
-#include "Drawable.hpp"
+#include "WindowBase.hpp"
 #include "Math/Vector.hpp"
 
 class Rect :  public Drawable {

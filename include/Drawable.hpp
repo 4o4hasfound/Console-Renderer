@@ -2,7 +2,6 @@
 #define DRAWABLE_INCLUDED
 
 #include<vector>
-#include "Window.hpp"
 #include "Math/Vector.hpp"
 
 class WindowBase;

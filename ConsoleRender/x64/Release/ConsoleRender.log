@@ -1,0 +1,87 @@
+﻿  Demo.cpp
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(23,32): warning C4244: 'return': conversion from '_Rep' to 'Pulsar::Decimal', possible loss of data
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(23,32): warning C4244:         with
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(23,32): warning C4244:         [
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(23,32): warning C4244:             _Rep=double
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(23,32): warning C4244:         ]
+  (compiling source file 'Example/Demo.cpp')
+  
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(29,29): warning C4244: 'return': conversion from '_Rep' to 'Pulsar::Decimal', possible loss of data
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(29,29): warning C4244:         with
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(29,29): warning C4244:         [
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(29,29): warning C4244:             _Rep=double
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(29,29): warning C4244:         ]
+  (compiling source file 'Example/Demo.cpp')
+  
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(36,29): warning C4244: 'return': conversion from '_Rep' to 'Pulsar::Decimal', possible loss of data
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(36,29): warning C4244:         with
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(36,29): warning C4244:         [
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(36,29): warning C4244:             _Rep=double
+D:\Program\C++\ConsoleRender\include\Debug\Time.hpp(36,29): warning C4244:         ]
+  (compiling source file 'Example/Demo.cpp')
+  
+D:\Program\C++\ConsoleRender\include\Math\Vector4.hpp(223,1): warning C4624: 'Pulsar::vec<4,std::ostream>': destructor was implicitly defined as deleted
+  (compiling source file 'Example/Demo.cpp')
+  D:\Program\C++\ConsoleRender\include\Math\Vector4.hpp(223,1):
+  the template instantiation context (the oldest one first) is
+  	D:\Program\C++\ConsoleRender\include\Debug\Debug.hpp(12,27):
+  	see reference to class template instantiation 'Pulsar::vec<4,std::ostream>' being compiled
+  
+D:\Program\C++\ConsoleRender\include\Math\Vector3.hpp(163,1): warning C4624: 'Pulsar::vec<3,std::ostream>': destructor was implicitly defined as deleted
+  (compiling source file 'Example/Demo.cpp')
+  D:\Program\C++\ConsoleRender\include\Math\Vector3.hpp(163,1):
+  the template instantiation context (the oldest one first) is
+  	D:\Program\C++\ConsoleRender\include\Debug\Debug.hpp(12,27):
+  	see reference to class template instantiation 'Pulsar::vec<3,std::ostream>' being compiled
+  
+D:\Program\C++\ConsoleRender\include\Math\Vector2.hpp(151,1): warning C4624: 'Pulsar::vec<2,std::ostream>': destructor was implicitly defined as deleted
+  (compiling source file 'Example/Demo.cpp')
+  D:\Program\C++\ConsoleRender\include\Math\Vector2.hpp(151,1):
+  the template instantiation context (the oldest one first) is
+  	D:\Program\C++\ConsoleRender\include\Debug\Debug.hpp(12,27):
+  	see reference to class template instantiation 'Pulsar::vec<2,std::ostream>' being compiled
+  
+D:\Program\C++\ConsoleRender\include\Math\Vector1.hpp(109,1): warning C4624: 'Pulsar::vec<1,std::ostream>': destructor was implicitly defined as deleted
+  (compiling source file 'Example/Demo.cpp')
+  D:\Program\C++\ConsoleRender\include\Math\Vector1.hpp(109,1):
+  the template instantiation context (the oldest one first) is
+  	D:\Program\C++\ConsoleRender\include\Debug\Debug.hpp(12,27):
+  	see reference to class template instantiation 'Pulsar::vec<1,std::ostream>' being compiled
+  
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(195,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(288,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(288,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(289,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(289,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(290,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(290,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(291,43): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(291,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(345,30): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(345,30): warning C4244:         with
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(345,30): warning C4244:         [
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(345,30): warning C4244:             T=int32_t
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(345,30): warning C4244:         ]
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(244,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  D:\Program\C++\ConsoleRender\Example\Demo.cpp(244,45):
+  the template instantiation context (the oldest one first) is
+  	D:\Program\C++\ConsoleRender\Example\Demo.cpp(283,13):
+  	see reference to function template instantiation 'bool checkSphereToRect<Rect>(Circle &,const RectOrButton *)' being compiled
+          with
+          [
+              RectOrButton=Rect
+          ]
+  
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(244,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(245,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(245,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(246,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(246,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(247,45): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Program\C++\ConsoleRender\Example\Demo.cpp(247,20): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+  Generating code
+  2 of 1186 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    5 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  ConsoleRender.vcxproj -> D:\Program\C++\ConsoleRender\x64\Release\ConsoleRender.exe

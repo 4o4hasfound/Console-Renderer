@@ -4,7 +4,7 @@
 #define NOMINMAX
 #include<Windows.h>
 
-#include "Window.hpp"
+#include "WindowBase.hpp"
 #include "Math/Vector.hpp"
 
 class WindowBase;

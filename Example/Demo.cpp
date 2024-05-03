@@ -1,4 +1,5 @@
 #include "Window.hpp"
+#include "AsciiWindow.hpp"
 #include "Font.hpp"
 #include "Text.hpp"
 #include "CircleShape.hpp"
@@ -129,7 +130,8 @@ bool gameEnd = 0;
 int counter = 0;
 
 
-Font font("OpenSans-Regular.ttf");
+//Font font("OpenSans-Regular.ttf");
+Font font("C:/Users/user/AppData/Local/Microsoft/Windows/Fonts/RobotoMono-Regular.ttf");
 Text text(&font);
 Text text2(&font);
 Text text3(&font);
@@ -151,8 +153,6 @@ void checkCollision();
 void RenderBlocks();
 
 void RunState();
-
-void GameEnd();
 
 template<typename RectOrButton>
 bool checkSphereToRect(Circle& circle, const RectOrButton* rect);
@@ -193,6 +193,9 @@ private:
 
 int main() {
     srand(time(NULL));
+    //window = new AsciiWindow(WINDOW_WIDTH, WINDOW_HEIGHT, 3, 
+    //    " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMOPQRSTUVWXYZ[\\]^_`abcdefghijklmopqrstuvwxyz{|}~"
+    //);
     window = new Window(WINDOW_WIDTH, WINDOW_HEIGHT, 2);
     SetupScene();
     SetupPlatform();
@@ -340,8 +343,8 @@ void RunState() {
         returnMenu->alive = false;
         
         text4.setColor(ivec3(0.0));
-        text4.setScale(13);
-        text4.setSpace(2);
+        text4.setScale(12);
+        text4.setSpace(0);
         text4.setString("Start : " + std::to_string(3 - (int)(CountDownClock.getSec())));
         text4.setPosition(platform->getPosition() + ivec2(2, -2));
         RenderBlocks();
@@ -481,25 +484,21 @@ void SetupText() {
 }
 
 void SetupButton() {
-    startGame = new Button(150, 25);
+    startGame = new Button(175, 25);
     startGame->setPosition(ivec2(100, 70));
     startGame->setColor(ivec3(255, 255, 255));
     startGame->addCallback(new StartGameCallback(startGame));
     window->addGadget(startGame);
 
-    exitGame = new Button(150, 25);
+    exitGame = new Button(175, 25);
     exitGame->setPosition(ivec2(100, 110));
     exitGame->setColor(ivec3(255, 255, 255));
     exitGame->addCallback(new ExitGameCallback(exitGame, window));
     window->addGadget(exitGame);
 
-    returnMenu = new Button(150, 25);
+    returnMenu = new Button(175, 25);
     returnMenu->setPosition(ivec2(100, 110));
     returnMenu->setColor(ivec3(255, 255, 255));
     returnMenu->addCallback(new ReturnMenuCallback(returnMenu));
     window->addGadget(returnMenu);
-}
-
-void GameEnd() { 
-
 }

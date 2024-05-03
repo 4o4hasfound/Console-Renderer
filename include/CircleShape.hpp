@@ -4,7 +4,7 @@
 #include<unordered_map>
 #include<vector>
 
-#include "Drawable.hpp"
+#include "WindowBase.hpp"
 #include "Math/Vector.hpp"
 
 class Circle : public Drawable {

@@ -44,7 +44,7 @@ void Text::draw(WindowBase* window) {
 
 void Text::RenderBitnmap() {
     int xpos = 0;
-    unsigned int exproximateW = (float)m_string.size() * m_pixelScale / 2;
+    unsigned int exproximateW = (float)m_string.size() * m_pixelScale;
     unsigned char* screen = new unsigned char[(int)m_pixelScale * exproximateW]();
     m_bitmap.resize(m_pixelScale);
     for (int j = 0; j < m_bitmap.size(); ++j) m_bitmap[j].resize(exproximateW);

@@ -1,0 +1,13 @@
+D:\Program\C++\ConsoleRender\Example\Demo.cpp;D:\Program\C++\ConsoleRender\ConsoleRender\x64\Release\Demo.obj
+D:\Program\C++\ConsoleRender\src\AsciiWindow.cpp;D:\Program\C++\ConsoleRender\ConsoleRender\x64\Release\AsciiWindow.obj
+D:\Program\C++\ConsoleRender\src\Button.cpp;D:\Program\C++\ConsoleRender\ConsoleRender\x64\Release\Button.obj
+D:\Program\C++\ConsoleRender\src\CircleShape.cpp;D:\Program\C++\ConsoleRender\ConsoleRender\x64\Release\CircleShape.obj
+D:\Program\C++\ConsoleRender\src\Drawable.cpp;D:\Program\C++\ConsoleRender\ConsoleRender\x64\Release\Drawable.obj
+D:\Program\C++\ConsoleRender\src\Font.cpp;D:\Program\C++\ConsoleRender\ConsoleRender\x64\Release\Font.obj
+D:\Program\C++\ConsoleRender\src\Gadget.cpp;D:\Program\C++\ConsoleRender\ConsoleRender\x64\Release\Gadget.obj
+D:\Program\C++\ConsoleRender\src\KeyState.cpp;D:\Program\C++\ConsoleRender\ConsoleRender\x64\Release\KeyState.obj
+D:\Program\C++\ConsoleRender\src\RectShape.cpp;D:\Program\C++\ConsoleRender\ConsoleRender\x64\Release\RectShape.obj
+D:\Program\C++\ConsoleRender\src\Sound.cpp;D:\Program\C++\ConsoleRender\ConsoleRender\x64\Release\Sound.obj
+D:\Program\C++\ConsoleRender\src\Text.cpp;D:\Program\C++\ConsoleRender\ConsoleRender\x64\Release\Text.obj
+D:\Program\C++\ConsoleRender\src\Window.cpp;D:\Program\C++\ConsoleRender\ConsoleRender\x64\Release\Window.obj
+D:\Program\C++\ConsoleRender\src\WindowBase.cpp;D:\Program\C++\ConsoleRender\ConsoleRender\x64\Release\WindowBase.obj

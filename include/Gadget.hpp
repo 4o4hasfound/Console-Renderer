@@ -1,11 +1,11 @@
 #ifndef GADGET_INCLUDED
 #define GADGET_INCLUDED
 
-#include "Window.hpp"
-#include "CallBack.hpp"
 #include "Drawable.hpp"
+#include "CallBack.hpp"
 
 class WindowBase;
+class Drawable;
 
 class Gadget: public Drawable {
 public:

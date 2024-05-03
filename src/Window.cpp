@@ -1,6 +1,6 @@
 #include "Window.hpp"
 
-std::unordered_map<int8_t, uint64_t> WindowBase::ToRGB = {
+std::unordered_map<int8_t, uint64_t> Window::ToRGB = {
 	   {BG_BLACK, RGB(0, 0, 0)},
 	   {BG_DARK_BLUE, RGB(0, 0, 128)},
 	   {BG_DARK_GREEN, RGB(0, 128, 0)},
@@ -36,92 +36,11 @@ std::unordered_map<int8_t, uint64_t> WindowBase::ToRGB = {
 };;
 
 // RGB value to CHAR_INFO
-std::unordered_map<int32_t, CHAR_INFO> WindowBase::ToCharInfo = std::unordered_map<int32_t, CHAR_INFO>();
+std::unordered_map<int32_t, CHAR_INFO> Window::ToCharInfo = std::unordered_map<int32_t, CHAR_INFO>();
 
-Window::Window(uint32_t width, uint32_t height, uint32_t characterSize) :
-	stdout_handle(GetStdHandle(STD_OUTPUT_HANDLE)),
-	stdin_handle(GetStdHandle(STD_INPUT_HANDLE)){
-	SetConsoleMode(stdin_handle, ENABLE_EXTENDED_FLAGS | ENABLE_WINDOW_INPUT | ENABLE_MOUSE_INPUT);
-	CONSOLE_CURSOR_INFO cursorInfo;
-	GetConsoleCursorInfo(stdin_handle, &cursorInfo);
-	cursorInfo.bVisible = FALSE;
-	SetConsoleCursorInfo(stdin_handle, &cursorInfo);
-	m_width = width;
-	m_height = height;
-	m_buffersize = m_width * m_height;
-	m_colorbuffer = new CHAR_INFO[m_buffersize];
-#	pragma omp parallel for
-	for (int i = 0; i < m_buffersize; ++i) {
-		m_colorbuffer[i].Char.UnicodeChar = PIXEL_SOLID;
-		m_colorbuffer[i].Attributes = 0;
-	}
-	CONSOLE_FONT_INFOEX cfi;
-	cfi.cbSize = sizeof(cfi);
-	cfi.nFont = 0;
-	cfi.dwFontSize.X = characterSize;
-	cfi.dwFontSize.Y = characterSize;
-	cfi.FontFamily = FF_DONTCARE;
-	cfi.FontWeight = FW_NORMAL;
-
-	wcscpy_s(cfi.FaceName, L"Consolas");
-	SetCurrentConsoleFontEx(stdout_handle, FALSE, &cfi);
-
-	SMALL_RECT windowSize = { 0, 0, 1, 1};
-	SetConsoleWindowInfo(stdout_handle, TRUE, &windowSize);
-	COORD bufferSize = { m_width, m_height };
-	SetConsoleScreenBufferSize(stdout_handle, bufferSize);
-	SetConsoleActiveScreenBuffer(stdout_handle);
-	CONSOLE_SCREEN_BUFFER_INFO csbi;
-	GetConsoleScreenBufferInfo(stdout_handle, &csbi);
-
-	SMALL_RECT rectWindow = { 0, 0, (short)m_width - 1, (short)m_height- 1 };
-	SetConsoleWindowInfo(stdout_handle, TRUE, &rectWindow);
-	m_console = GetConsoleWindow();
-	//MoveWindow(m_console, 0, 0, m_width, m_height, TRUE);
-	SetUpRGBMap();
-}
-
-void WindowBase::setPixel(uint32_t x, uint32_t y, const ivec3 &color) {
-	if (x < 0 || x >= m_width || y < 0 || y >= m_height) {
-		return;
-	}
-	CHAR_INFO result = ToCharInfo[RGB(
-		color.x - color.x % ColorMapStep, 
-		color.y - color.y % ColorMapStep, 
-		color.z - color.z % ColorMapStep
-	)];
-	m_colorbuffer[static_cast<uint32_t>(y) * m_width + x] = result;
-}
-
-void WindowBase::setPixel(uint32_t x, uint32_t y, CHAR_INFO char_info) {
-	if (x < 0 || x >= m_width || y < 0 || y >= m_height) {
-		return;
-	}
-	m_colorbuffer[static_cast<uint32_t>(y) * m_width + x] = char_info;
-}
-
-void WindowBase::fill(const ivec3& color) {
-//#	pragma omp parallel for
-	for (int i = 0; i < m_buffersize; ++i) {
-		m_colorbuffer[i].Char.UnicodeChar = PIXEL_SOLID;
-		m_colorbuffer[i].Attributes = 0;
-	}
-}
-
-void WindowBase::draw(Drawable* object) {
-	object->draw(this);
-}
-
-void WindowBase::addGadget(Gadget* gadget) {
-	m_gadgets.push_back(gadget);
-}
-
-void WindowBase::renderGadgets() {
-	// Render Gadgets
-	for (int i = 0; i < m_gadgets.size(); ++i) {
-		if (m_gadgets[i]->alive)
-			this->draw(m_gadgets[i]);
-	}
+Window::Window(uint32_t width, uint32_t height, uint32_t characterSize) {
+	this->setupWindow(width, height, characterSize);
+	this->SetUpRGBMap();
 }
 
 void Window::setTitle(std::wstring title) {
@@ -129,9 +48,36 @@ void Window::setTitle(std::wstring title) {
 }
 
 void Window::setTitle(std::string title) {
-	//std::wstring ws(title.size(), L' ');
-	//ws.resize(std::mbstowcs(&ws[0], title.c_str(), title.size()));
-	//SetConsoleTitle(ws.c_str());
+	std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
+	std::wstring wide = converter.from_bytes(title.c_str());
+	this->setTitle(wide);
+}
+
+void Window::setPixel(uint32_t x, uint32_t y, const ivec3& color) {
+	if (x < 0 || x >= m_width || y < 0 || y >= m_height) {
+		return;
+	}
+	CHAR_INFO result = ToCharInfo[RGB(
+		color.x - color.x % ColorMapStep,
+		color.y - color.y % ColorMapStep,
+		color.z - color.z % ColorMapStep
+	)];
+	m_colorbuffer[static_cast<uint32_t>(y) * m_width + x] = result;
+}
+
+void Window::setPixel(uint32_t x, uint32_t y, CHAR_INFO char_info) {
+	if (x < 0 || x >= m_width || y < 0 || y >= m_height) {
+		return;
+	}
+	m_colorbuffer[static_cast<uint32_t>(y) * m_width + x] = char_info;
+}
+
+void Window::fill(const ivec3& color) {
+	//#	pragma omp parallel for
+	for (int i = 0; i < m_buffersize; ++i) {
+		m_colorbuffer[i].Char.UnicodeChar = PIXEL_SOLID;
+		m_colorbuffer[i].Attributes = 0;
+	}
 }
 
 void Window::render() {
@@ -142,19 +88,11 @@ void Window::render() {
 	};
 	SMALL_RECT rectWindow = { 0, 0, (short)m_width - 1, (short)m_height - 1 };
 
-	WriteConsoleOutput(stdout_handle, m_colorbuffer, buffersize, { 0, 0 }, &rectWindow);
+	WriteConsoleOutput(m_stdout_handle, m_colorbuffer, buffersize, { 0, 0 }, &rectWindow);
 	
 }
 
-void WindowBase::updateGadgets() {
-	// Update Gadgets
-	for (int i = 0; i < m_gadgets.size(); ++i) {
-		if (m_gadgets[i]->alive)
-			m_gadgets[i]->update(this);
-	}
-}
-
-void WindowBase::SetUpRGBMap() {
+void Window::SetUpRGBMap() {
 	if (!ToCharInfo.empty())
 		return;
 	auto dis = [](uint64_t c1, uint64_t c2) {
